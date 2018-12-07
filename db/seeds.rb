@@ -2,7 +2,8 @@ require_relative('../models/merchant.rb')
 require_relative('../models/tag.rb')
 require("pry-byebug")
 
-Merchant.delete_all
+Merchant.delete_all()
+Tag.delete_all()
 
 merchant1 = Merchant.new ({
   "merchant_name" => "Amazon"
@@ -21,12 +22,6 @@ merchant3 = Merchant.new ({
   })
 
   merchant3.save()
-
-tag1 = Tag.new({
-  "tag_name" => "Groceries"
-  })
-
-tag1.save()
 
 tag1 = Tag.new({
   "tag_name" => "Books"
