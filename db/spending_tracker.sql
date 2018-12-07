@@ -10,7 +10,7 @@ merchant_name VARCHAR(255)
 
 CREATE TABLE tags (
 id SERIAL PRIMARY KEY,
-tag_name VARCHAR(255)
+spending_catagory VARCHAR(255)
 );
 
 CREATE TABLE transactions(
