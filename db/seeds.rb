@@ -1,7 +1,9 @@
 require_relative('../models/merchant.rb')
 require_relative('../models/tag.rb')
+require_relative('../models/transaction.rb')
 require("pry-byebug")
 
+Transaction.delete_all()
 Merchant.delete_all()
 Tag.delete_all()
 
@@ -40,6 +42,13 @@ tag3 = Tag.new({
   })
 
 tag3.save()
+
+transaction1 = Transaction.new({
+  "merchant_id" => merchant1.id,
+  "tag_id" => tag1.id
+  })
+
+transaction1.save()
 
 
 binding.pry
