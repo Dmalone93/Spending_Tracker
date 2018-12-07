@@ -2,19 +2,20 @@ require_relative( '../db/sql_runner.rb' )
 
 class Transaction
 
-  attr_reader :id, :merchant_id, :tag_id
+  attr_reader :id, :value, :merchant_id, :tag_id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @merchant_id = options['merchant_id']
     @tag_id = options['tag_id']
+    @value = options['value'].to_i
   end
 
   #remember to put non sql functions in here
 
   def save()
-    sql = "INSERT INTO transactions (merchant_id, tag_id) VALUES ($1, $2) RETURNING id"
-    values = [@merchant_id, @tag_id]
+    sql = "INSERT INTO transactions (merchant_id, tag_id, value) VALUES ($1, $2, $3) RETURNING id"
+    values = [@merchant_id, @tag_id, @value]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
