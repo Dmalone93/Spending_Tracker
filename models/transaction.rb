@@ -13,6 +13,8 @@ class Transaction
 
   #remember to put non sql functions in here
 
+  # make functions that test that there is money in the budget
+
   def save()
     sql = "INSERT INTO transactions (merchant_id, tag_id, value) VALUES ($1, $2, $3) RETURNING id"
     values = [@merchant_id, @tag_id, @value]
