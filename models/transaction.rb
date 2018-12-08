@@ -1,4 +1,6 @@
 require_relative( '../db/sql_runner.rb' )
+require_relative('./merchant.rb')
+require_relative('./tag.rb')
 
 class Transaction
 
@@ -45,6 +47,10 @@ class Transaction
     values = [id]
     results = SqlRunner.run(sql, values)
     return Transaction.new(results.first)
+  end
+
+  def merchant_tag_name
+    return "#{merchant_name}, #{tag_name}"
   end
 
 

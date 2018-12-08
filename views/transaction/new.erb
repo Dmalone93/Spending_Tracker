@@ -1,0 +1,25 @@
+<form action="/transaction/new" method="get">
+<label>
+  Select a merchant:
+  <select name="merchant_id">
+    <% for merchant in @merchants %>
+    <option value="<% merchant.id %>"><%= merchant.merchant_name %></option>
+    <% end %>
+  </select>
+</label>
+
+<label>
+  Select a tag:
+  <select name="tag_id">
+    <% for tag in @tags %>
+    <option value="<% tag.id %>"><%= tag.tag_name %></option>
+    <% end %>
+  </select>
+</label>
+
+<label for="value">Amount Spent:
+  <input type="number">
+</label>
+
+<<input class="btn btn--action" type="submit" value="add transaction">
+</form>

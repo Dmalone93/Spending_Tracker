@@ -1,13 +1,46 @@
 body {
-  background-color: black;
+  background-color: rgb(33, 109, 28);
 }
 
 h1 {
   padding-left: 40px;
   color: white;
   font-family: helvetica;
+  font-size: 30px;
+  background-color: #000000;
+  border-bottom: 1px solid #7b847b;
+  color: #fff;
 }
 
 .btn {
-  color: blue;
+  color: black;
+  font-family: helvetica;
+  font-size: 15px
+}
+
+.home {
+  font-size: 25px;
+  font-family: helvetica;
+  color: white;
+}
+
+label {
+  font-family: helvetica;
+  color: white;
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+  color: white;
+  font-family: helvetica;
+}
+
+u {
+  color: white;
+}
+
+.value {
+  font-size: 40px;
+  font-family: helvetica
 }

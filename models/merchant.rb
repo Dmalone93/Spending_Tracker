@@ -51,6 +51,12 @@ class Merchant
     return results.map {|tag| Tag.new(tag)}
   end
 
+  # def update()
+  #   sql = "UPDATE merchants SET merchant_name = ($1) WHERE id = ($2)"
+  #   vaues = [@merchant_name, @id]
+  #   SqlRunner.run(sql, values)
+  # end
+
   #self.delete(id) #update()
 
 
