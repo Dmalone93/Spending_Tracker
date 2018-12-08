@@ -38,5 +38,18 @@ class Tag
     return Tag.new(results.first)
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM tags WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+  end
+
+  def merchants()
+    sql = "SELECT m.* FROM merchants m INNER JOIN transactions transaction ON merchant_id = m.id WHERE transaction.tag_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map {|merchant| Merchant.new(merchant)}
+  end
+
 
 end

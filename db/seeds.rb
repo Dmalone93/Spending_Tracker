@@ -60,8 +60,8 @@ transaction2 = Transaction.new({
   transaction2.save()
 
 transaction3 = Transaction.new({
-  "merchant_id" => merchant2.id,
-  "tag_id" => tag2.id,
+  "merchant_id" => merchant3.id,
+  "tag_id" => tag3.id,
   "value" => 50
   })
 
