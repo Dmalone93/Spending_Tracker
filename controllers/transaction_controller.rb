@@ -16,3 +16,9 @@ get '/transaction/new' do
   @tags = Tag.all()
   erb ( :"transaction/new")
 end
+
+post '/transaction' do
+  @transaction = Transaction.new(params)
+  @transaction.save()
+  erb(:create)
+end
