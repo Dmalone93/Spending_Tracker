@@ -8,14 +8,3 @@ also_reload('./models/*')
 get '/' do
   erb( :index )
 end
-
-get '/transaction' do
-  @transaction = Transaction.all()
-  erb( :"transaction/index" )
-end
-
-get '/transaction/new' do
-  @merchants = Merchant.all()
-  @tags = Tag.all()
-  erb ( :"transaction/new")
-end
