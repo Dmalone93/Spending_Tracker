@@ -1,25 +1,20 @@
-  <h1>New Merchant</h1>
+<i><h1>MERCHANTS</h1></i>
   <hr/>
 
     <nav class="topnav">
     <a class="home" href="/">Home</a>
+    <form action="/merchant/new"><input type="submit" value="Create Merchant"></form>
     </nav>
   <br>
 
-  <form action="/merchant/new" method="post">
-    <label for="merchant_name">Merchant: </label>
-    <input type="text" name="merchant_name">
 
+<div class="merchant">
 
+  <% for merchant in @merchants %>
+  <div class="merchant-info">
 
-    <select name="merchant_id">
-      <% for merchant in @merchants %>
-      <option value="<%=merchant.id%>"><%=merchant.merchant_name%></option>
-      <% end %>
-    <!-- this select method creates a drop down option wth all current merchant names created so far -->
+    <p>Merchant: <a class="merchant_name" href="/merchant/<%= merchant.id %>"> <%= merchant.merchant_name %></a></p>
+  </div>
+  <% end %>
 
-
-
-    <input type="submit" value="Save">
-  </form>
 </div>
