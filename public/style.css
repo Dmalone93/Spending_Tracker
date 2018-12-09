@@ -41,10 +41,19 @@ u {
 }
 
 .value {
-  font-size: 40px;
+  font-size: 80px;
   font-family: helvetica
 }
 
 .topnav {
   color: black;
+}
+
+form {
+  font-size: 20px;
+}
+
+.row {
+  color: white;
+  font-family: helvetica;
 }

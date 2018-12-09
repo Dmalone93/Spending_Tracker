@@ -9,3 +9,25 @@ get '/tag' do
   @tags = Tag.all()
   erb (:"tag/index")
 end
+
+get '/tag/new' do
+  @tags = Tag.all()
+  erb (:"tag/new")
+end
+
+post '/tag/new' do
+  @tags = Tag.all()
+  Tag.new(params).save()
+  redirect('/tag')
+end
+
+get '/tag/:id' do
+  @tags = Tag.find(params['id'])
+  erb (:"tag/show")
+end
+
+get '/tag/:id/delete' do
+  @tags = Tag.find(params['id'].to_i)
+  @tags.delete()
+  redirect('/tag')
+end

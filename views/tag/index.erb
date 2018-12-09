@@ -1,12 +1,18 @@
-<i><h1>Create Tag</h1></i>
+<i><h1>TAGS</h1></i>
+  <hr/>
 
-<nav class="topnav">
-<a class="home" href="/">Home</a>
-</nav>
-<body>
+    <form action="/tag/new"><input type="submit" value="Create Tag"></form>
+    </nav>
+  <br>
 
-<% for tag in @tags %>
-  <p>Tag: <%= tag.tag_name() %> </p>
-<% end %>
 
-</body>
+<div class="tags">
+
+  <% for tag in @tags %>
+  <div class="tag_name">
+
+    <p><a class="tag_name" href="/tag/<%= tag.id %>"><%=tag.tag_name %></a></p>
+  </div>
+  <% end %>
+
+</div>

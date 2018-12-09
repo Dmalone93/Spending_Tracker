@@ -1,0 +1,11 @@
+<div class="container" id="show-container">
+  <i><h1>DELETE TAG</h1></i>
+
+  <h3><%= @tags.tag_name %></h3>
+
+  <div class="row">
+
+    <form action="/tag/<%=@tags.id%>/delete" method="post"><input type="submit" value="Delete"></form>
+
+  </div>
+</div>

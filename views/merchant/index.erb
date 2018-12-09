@@ -1,8 +1,6 @@
 <i><h1>MERCHANTS</h1></i>
   <hr/>
 
-    <nav class="topnav">
-    <a class="home" href="/">Home</a>
     <form action="/merchant/new"><input type="submit" value="Create Merchant"></form>
     </nav>
   <br>
@@ -13,7 +11,7 @@
   <% for merchant in @merchants %>
   <div class="merchant-info">
 
-    <p>Merchant: <a class="merchant_name" href="/merchant/<%= merchant.id %>"> <%= merchant.merchant_name %></a></p>
+    <p><a class="merchant_name" href="/merchant/<%= merchant.id %>"> <%= merchant.merchant_name %></a></p>
   </div>
   <% end %>
 
