@@ -1,0 +1,12 @@
+<i><h1>Create Tag</h1></i>
+
+<nav class="topnav">
+<a class="home" href="/">Home</a>
+</nav>
+<body>
+
+<% for tag in @tags %>
+  <p>Tag: <%= tag.tag_name() %> </p>
+<% end %>
+
+</body>
