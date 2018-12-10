@@ -53,7 +53,7 @@ class Merchant
 
   def update()
     sql = "UPDATE merchants SET merchant_name = ($1) WHERE id = ($2)"
-    vaues = [@merchant_name, @id]
+    values = [@merchant_name, @id]
     SqlRunner.run(sql, values)
   end
 

@@ -1,11 +1,4 @@
-<div class="container" id="edit-container">
-
-  <form action="/merchant/<%=@merchants.id%>/edit"method="get">
-
-<select name="tag_id">
-  <% for tag in @tags %>
-  <option <%= 'selected' if tag.id == @merchants.tag_id %> value="<%=tag.id%>"><%=tag.tag_name%></option>
-  <% end %>
-</select>
-<input type="submit" value="Save">
-</form>
+  <form action="/merchant/<%= @merchants.id %>/edit" method="post">
+    <input type="text" name="merchant_name" value="<%= @merchants.merchant_name %>">
+    <input  type="submit" value="Edit Merchant">
+    </form>

@@ -21,19 +21,25 @@ post '/merchant/new' do
   redirect('/merchant')
 end
 
+get '/merchant/:id/edit' do
+  @merchants = Merchant.find(params['id'])
+  erb (:"merchant/edit")
+end
+
+post '/merchant/:id/edit' do
+  merchant = Merchant.new(params)
+  merchant.update
+  redirect ('/merchant')
+end
+
+
 get '/merchant/:id' do
   @merchants = Merchant.find(params['id'])
   erb (:"merchant/show")
 end
 
-
 post '/merchant/:id/delete' do
   @merchant = Merchant.find(params['id'])
   @merchant.delete()
   redirect ('/merchant')
-end
-
-get '/merchant/:id/edit' do
-  @merchants = Merchant.all()
-  erb (:"merchant/edit")
 end
