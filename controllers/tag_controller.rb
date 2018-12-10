@@ -27,7 +27,7 @@ get '/tag/:id' do
 end
 
 get '/tag/:id/delete' do
-  @tags = Tag.find(params['id'].to_i)
+  @tags = Tag.find(params['id'])
   @tags.delete()
   redirect('/tag')
 end

@@ -29,7 +29,7 @@ end
 
 
 post '/merchant/:id/delete' do
-  @merchants = Merchant.find(params['id'].to_i)
-  @merchants.delete([:id])
+  @merchant = Merchant.find(params['id'])
+  @merchant.delete()
   redirect ('/merchant')
 end
