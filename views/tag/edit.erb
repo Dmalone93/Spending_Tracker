@@ -1,5 +1,4 @@
-<div class = "container" id="edit-controller">
-
-<h1>Edit <%= @tag.tag_name %></h1>
-
-</div>
+<form action="/tag/<%= @tags.id %>/edit" method="post">
+  <input type="text" name="tag_name" value="<%= @tags.tag_name %>">
+  <input  type="submit" value="Edit Tag">
+  </form>
