@@ -9,7 +9,7 @@
   </nav>
 
 <% for transaction in @transaction %>
-  <p>Merchant: <%= transaction.merchant_id() %> </p>
+  <p>Merchant: <%= transaction.merchant() %> </p>
   <p>Tag: <%= transaction.tag_id() %></p>
   <u><p>Total: <%= transaction.value() %></p></u>
 <% end %>
