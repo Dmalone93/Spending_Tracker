@@ -15,7 +15,7 @@ tag_name VARCHAR(255)
 
 CREATE TABLE transactions(
 id SERIAL PRIMARY KEY,
-value INTEGER,
+value INT,
 merchant_id INT REFERENCES merchants(id),
 tag_id INT REFERENCES tags(id)
 

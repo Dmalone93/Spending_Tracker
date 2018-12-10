@@ -1,11 +1,16 @@
 <i><h1>All Transactions</h1></i>
-</nav>
+<nav>
 <body>
+
+  <form action="/transaction/new"><input type="submit" value="Create Transaction"></form>
+
+  <form action="/transaction/:id"><input type="submit" value="Delete Transaction"></form>
+
+  </nav>
 
 <% for transaction in @transaction %>
   <p>Merchant: <%= transaction.merchant_id() %> </p>
   <p>Tag: <%= transaction.tag_id() %></p>
   <u><p>Total: <%= transaction.value() %></p></u>
 <% end %>
-
 </body>

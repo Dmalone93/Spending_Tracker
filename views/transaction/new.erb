@@ -2,29 +2,25 @@
   <hr/>
 
 
-<form action="/transaction/new" method="get">
-<label>
+<form action="/transaction/new" method="post">
+<label>Select a merchant:</label>
   <div id="create-container" class="container">
-  Select a merchant:
   <select name="merchant_id">
     <% for merchant in @merchants %>
-    <option value="<% merchant.id %>"><%= merchant.merchant_name %></option>
+    <option value="<%= merchant.id %>"><%= merchant.merchant_name %></option>
     <% end %>
   </select>
-</label>
 
-<label>
-  Select a tag:
+<label>Select a tag:</label>
   <select name="tag_id">
     <% for tag in @tags %>
-    <option value="<% tag.id %>"><%= tag.tag_name %></option>
+    <option value="<%= tag.id %>"><%= tag.tag_name %></option>
     <% end %>
   </select>
-</label>
 
-<label for="value">Amount Spent:
-  <input type="number">
-</label>
+<input type="number" name="value">
 
-<input class="btn btn--action" type="submit" value="add transaction">
+
+<input type="submit" value="add transaction">
+
 </form>

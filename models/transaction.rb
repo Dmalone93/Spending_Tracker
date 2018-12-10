@@ -36,9 +36,9 @@ class Transaction
     return results.map {|transaction| Transaction.new(transaction)}
   end
 
-  def self.delete(id)
+  def delete()
     sql = "DELETE FROM transactions WHERE id = $1"
-    values = [id]
+    values = [@id]
     results = SqlRunner.run(sql, values)
   end
 
@@ -47,10 +47,6 @@ class Transaction
     values = [id]
     results = SqlRunner.run(sql, values)
     return Transaction.new(results.first)
-  end
-
-  def merchant_tag_name
-    return "#{merchant_name}, #{tag_name}"
   end
 
 

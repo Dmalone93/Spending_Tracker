@@ -1,4 +1,3 @@
-#params is alwasy a hash
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/transaction.rb' )
@@ -32,4 +31,9 @@ post '/merchant/:id/delete' do
   @merchant = Merchant.find(params['id'])
   @merchant.delete()
   redirect ('/merchant')
+end
+
+get '/merchant/:id/edit' do
+  @merchants = Merchant.all()
+  erb (:"merchant/edit")
 end

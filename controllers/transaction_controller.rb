@@ -17,8 +17,14 @@ get '/transaction/new' do
   erb ( :"transaction/new")
 end
 
-post '/transaction' do
+post '/transaction/new' do
   @transaction = Transaction.new(params)
   @transaction.save()
-  erb(:create)
+  redirect('/transaction')
+end
+
+post '/transaction/:id/delete' do
+  @transaction = Transaction.find(params['id'])
+  @transaction.delete()
+  redirect ('/transaction')
 end
