@@ -4,20 +4,20 @@
 
   <form action="/transaction/new"><input type="submit" value="Create Transaction"></form>
 
-  <form action="/transaction/:id"><input type="submit" value="Delete Transaction"></form>
-
   </nav>
 <% total = 0 %>
 <% for transaction in @transaction %>
+  <p>id: <%=transaction.id()%></p>
   <p>Merchant: <%= transaction.merchant.merchant_name() %> </p>
   <p>Tag: <%= transaction.tag.tag_name() %></p>
   <u><p>Total: <%= transaction.value() %></p></u>
   <% total += transaction.value() %>
+  <form method="post" action="/transaction/<%= transaction.id %>/delete"><input type="submit" value="Delete Transaction"></form>
 <% end %>
 
 
 <div class="total">
-  <label for="value">Total Amount: <%=total%> </label>
+  <label for="value">Total Spendature: <%=total%> </label>
 
 </div>
 
