@@ -12,10 +12,16 @@ h1 {
   color: #fff;
 }
 
+a {
+  border-bottom: 1px solid #7b847b;
+  padding-left: 40px;
+  color: white;
+}
+
 .btn {
   color: black;
   font-family: helvetica;
-  font-size: 15px
+  font-size: 30px
 }
 
 .home {
@@ -28,6 +34,7 @@ label {
   font-family: helvetica;
   color: white;
   font-size: 20px;
+  align-items: center;
 }
 
 p {

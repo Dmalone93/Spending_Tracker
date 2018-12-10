@@ -7,10 +7,19 @@
   <form action="/transaction/:id"><input type="submit" value="Delete Transaction"></form>
 
   </nav>
-
+<% total = 0 %>
 <% for transaction in @transaction %>
-  <p>Merchant: <%= transaction.merchant() %> </p>
-  <p>Tag: <%= transaction.tag_id() %></p>
+  <p>Merchant: <%= transaction.merchant.merchant_name() %> </p>
+  <p>Tag: <%= transaction.tag.tag_name() %></p>
   <u><p>Total: <%= transaction.value() %></p></u>
+  <% total += transaction.value() %>
 <% end %>
+
+
+<div class="total">
+  <label for="value">Total Amount: <%=total%> </label>
+
+</div>
+
+
 </body>
