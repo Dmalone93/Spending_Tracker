@@ -16,7 +16,9 @@ tag_name VARCHAR(255)
 CREATE TABLE transactions(
 id SERIAL PRIMARY KEY,
 value INT,
+day DATE,
 merchant_id INT REFERENCES merchants(id),
 tag_id INT REFERENCES tags(id)
-
 );
+
+-- do i create a table called time? or do is there a function for timestamp?

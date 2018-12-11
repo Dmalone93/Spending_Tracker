@@ -29,7 +29,7 @@ get '/transaction/:id' do
 end
 
 post '/transaction/:id/delete' do
-  @transactions = Transaction.find(params['id'])
-  @transactions.delete()
+  @transaction = Transaction.find(params['id'])
+  @transaction.delete()
   redirect ('/transaction')
 end
