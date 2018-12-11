@@ -1,9 +1,9 @@
-<div class="container" id="show-container">
+<div class="container">
 
   <i><h1>DELETE MERCHANT</h1></i>
   <div class="row">
 
-    <h3>You want to delete: <%= @merchants.merchant_name %> ?</h3>
+    <h3>Delete: <%= @merchants.merchant_name %> ?</h3>
 
     <form action="/merchant/<%=@merchants.id%>/delete" method="post"><input type="submit" value="Delete"></form>
 

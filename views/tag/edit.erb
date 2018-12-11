@@ -1,4 +1,10 @@
+<div class = "edit-tag">
+
+  <u><p>Please change your tag name</p></u>
+
 <form action="/tag/<%= @tags.id %>/edit" method="post">
   <input type="text" name="tag_name" value="<%= @tags.tag_name %>">
   <input  type="submit" value="Edit Tag">
   </form>
+
+  </div>

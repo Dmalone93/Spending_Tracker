@@ -8,3 +8,8 @@ also_reload('./models/*')
 get '/' do
   erb( :index )
 end
+
+post '/' do
+  @transaction = Transaction.new(params)
+  erb(:"/transaction/index")
+end

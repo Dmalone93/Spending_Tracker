@@ -12,6 +12,26 @@ h1 {
   color: #fff;
 }
 
+.navbar{
+  display; flex
+}
+
+
+.edit-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-header {
+  display: flex;
+}
+
+.container {
+  display: flex;
+
+
+}
+
 a {
   border-bottom: 1px solid #7b847b;
   padding-left: 40px;
@@ -19,16 +39,25 @@ a {
 }
 
 .btn {
-  color: black;
+  color: blue;
   font-family: helvetica;
-  font-size: 30px
+  font-size: 30px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 
 }
 
-.home {
+h2, .home {
   font-size: 25px;
   font-family: helvetica;
   color: white;
+  text-align:justify;
 }
 
 label {
@@ -53,19 +82,12 @@ u {
   font-family: helvetica
 }
 
-.topnav {
-  color: black;
-}
 
-form {
-  font-size: 25px;
+h3 {
+  color: white;
 }
 
 .row {
-  color: white;
   font-family: helvetica;
-}
-
-h3 {
   color: white;
 }

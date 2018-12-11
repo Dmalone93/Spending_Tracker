@@ -10,7 +10,6 @@ get '/transaction' do
   erb( :"transaction/index" )
 end
 
-
 get '/transaction/new' do
   @merchants = Merchant.all()
   @tags = Tag.all()

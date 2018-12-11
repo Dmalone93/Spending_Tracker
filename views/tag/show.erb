@@ -2,11 +2,11 @@
   <i><h1>TAG</h1></i>
   <div class="row">
 
-  <h3><%= @tags.tag_name %></h3>
+  <h3>Delete <%= @tags.tag_name %> ?</h3>
 
     <form action="/tag/<%=@tags.id%>/delete" method="post"><input type="submit" value="Delete"></form>
 
     <form action="/tag/<%=@tags.id%>/edit" method="get"><input type="submit" value="Edit"></form>
-    
+
   </div>
 </div>

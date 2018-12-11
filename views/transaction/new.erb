@@ -4,7 +4,6 @@
 
 <form action="/transaction/new" method="post">
 <label>Select a merchant:</label>
-  <div id="create-container" class="container">
   <select name="merchant_id">
     <% for merchant in @merchants %>
     <option value="<%= merchant.id %>"><%= merchant.merchant_name %></option>

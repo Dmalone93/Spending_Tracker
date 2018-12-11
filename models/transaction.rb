@@ -5,7 +5,7 @@ require ('date')
 
 class Transaction
 
-  attr_reader :id, :value, :merchant_id, :tag_id, :day
+  attr_reader :id, :value, :merchant_id, :tag_id, :day, :budget
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -13,11 +13,12 @@ class Transaction
     @tag_id = options['tag_id']
     @value = options['value'].to_i if options['id'].to_f
     @day = options['day']
+    @budget = 250
   end
 
   def save()
-    sql = "INSERT INTO transactions (merchant_id, tag_id, value, day) VALUES ($1, $2, $3, $4) RETURNING id"
-    values = [@merchant_id, @tag_id, @value, @day]
+    sql = "INSERT INTO transactions (merchant_id, tag_id, value, day, budget) VALUES ($1, $2, $3, $4, $5) RETURNING id"
+    values = [@merchant_id, @tag_id, @value, @day, @budget]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
