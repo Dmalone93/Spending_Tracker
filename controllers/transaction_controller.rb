@@ -6,7 +6,7 @@ require_relative( '../models/tag.rb' )
 also_reload( '../models/*' )
 
 get '/transaction' do
-  @transaction = Transaction.all()
+  @transaction = Transaction.order()
   erb( :"transaction/index" )
 end
 

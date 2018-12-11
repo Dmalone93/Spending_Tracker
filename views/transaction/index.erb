@@ -14,7 +14,8 @@
   <p>Date: <%= transaction.day() %></p>
   <% total += transaction.value() %>
   <form method="post" action="/transaction/<%= transaction.id %>/delete"><input type="submit" value="Delete Transaction"></form>
-<% end %>
+  <% end %>
+
 
 
 <div class="total">

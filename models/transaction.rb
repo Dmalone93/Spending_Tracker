@@ -11,13 +11,9 @@ class Transaction
     @id = options['id'].to_i if options['id']
     @merchant_id = options['merchant_id']
     @tag_id = options['tag_id']
-    @value = options['value'].to_f
+    @value = options['value'].to_i if options['id'].to_f
     @day = options['day']
   end
-
-  #remember to put non sql functions in here
-
-  # make functions that test that there is money in the budget
 
   def save()
     sql = "INSERT INTO transactions (merchant_id, tag_id, value, day) VALUES ($1, $2, $3, $4) RETURNING id"
@@ -29,6 +25,12 @@ class Transaction
   def self.delete_all()
     sql = "DELETE FROM transactions"
     SqlRunner.run(sql)
+  end
+
+  def self.order()
+    sql = "SELECT * FROM transactions ORDER BY day DESC"
+    results = SqlRunner.run(sql)
+    return results.map {|transaction| Transaction.new(transaction)}
   end
 
 
