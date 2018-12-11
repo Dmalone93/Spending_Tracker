@@ -1,18 +1,16 @@
 <i><h1>MERCHANTS</h1></i>
 
+<br>
+<br>
 
-    <form action="/merchant/new"><input type="submit" value="Create Merchant"></form>
-    </nav>
-  <br>
+<form action="/merchant/new"><input type="submit" value="Create Merchant"></form>
+</nav>
+<br>
+<table>
+  <tr>
+    <td><% for merchant in @merchants %></td>
 
-
-<div class="merchant">
-
-  <% for merchant in @merchants %>
-  <div class="merchant-info">
-
-    <p><a class="merchant_name" href="/merchant/<%= merchant.id %>"> <%= merchant.merchant_name %></a></p>
-  </div>
-  <% end %>
-
-</div>
+    <td><p><a class="merchant_name" href="/merchant/<%= merchant.id %>"> <%= merchant.merchant_name %></a></p></td>
+    <% end %>
+  </tr>
+</table>

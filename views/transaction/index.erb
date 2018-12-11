@@ -1,31 +1,32 @@
-<i><h1>All Transactions</h1></i>
-<nav>
+<i><h1>ALL TRANSACTIONS</h1></i>
 <body>
-
-  <form action="/transaction/new"><input type="submit" value="Create Transaction"></form>
-
+  <nav>
+    <form action="/transaction/new"><input type="submit" value="Create Transaction"></form>
   </nav>
 
 
-
-<% total = 0 %>
-<% for transaction in @transaction %>
-  <p>id: <%=transaction.id()%></p>
-  <p>Merchant: <%= transaction.merchant.merchant_name() %> </p>
-  <p>Tag: <%= transaction.tag.tag_name() %></p>
-  <u><p>Total: £<%= transaction.value() %></p></u>
-  <p>Date: <%= transaction.day() %></p>
-  <% total += transaction.value() %>
-
-
-  <form method="post" action="/transaction/<%= transaction.id %>/delete"><input type="submit" value="Delete Transaction"></form>
-  <% end %>
+  <table>
+    <tr>
+      <% total = 0 %>
+      <% for transaction in @transaction %>
 
 
 
+      <td><p>id: <%=transaction.id()%></p></td>
+      <td><p>Merchant: <%= transaction.merchant.merchant_name() %> </p></td>
+      <td><p>Tag: <%= transaction.tag.tag_name() %></p></td>
+      <td><u><p>Total: £<%= transaction.value() %></p></u></td>
+      <td><p>Date: <%= transaction.day() %></p></td>
+      <% total += transaction.value() %>
+      <td><form method="post" action="/transaction/<%= transaction.id %>/delete"><input type="submit" value="Delete Transaction"></form></td>
+    </tr>
+    <% end %>
+  </table>
 
-  <label for="value">Total Amount Spent: £<%=total%> </label>
-  <br>
-  <label for="budget">Budget: £<%=transaction.budget - total %></label>
+
+  <div class="budget">
+  <div class="response"><p><label for="value">Total Amount Spent: £<%=total%> </label></p></div>
+  <div class="response"><p><label for="budget">Budget: £<%=transaction.budget - total %></label></p></div>
+  </div>
 
 </body>

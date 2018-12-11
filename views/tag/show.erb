@@ -1,12 +1,8 @@
-<div class="container" id="show-container">
-  <i><h1>TAG</h1></i>
-  <div class="row">
+<i><h1>TAG</h1></i>
 
-  <h3>Delete <%= @tags.tag_name %> ?</h3>
 
-    <form action="/tag/<%=@tags.id%>/delete" method="post"><input type="submit" value="Delete"></form>
+<h3>Delete <%= @tags.tag_name %> ?</h3>
 
-    <form action="/tag/<%=@tags.id%>/edit" method="get"><input type="submit" value="Edit"></form>
+<form action="/tag/<%=@tags.id%>/delete" method="post"><input type="submit" value="Delete"></form>
 
-  </div>
-</div>
+<form action="/tag/<%=@tags.id%>/edit" method="get"><input type="submit" value="Edit"></form>

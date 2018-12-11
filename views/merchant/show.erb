@@ -1,12 +1,7 @@
-<div class="container">
+<i><h1>DELETE MERCHANT</h1></i>
 
-  <i><h1>DELETE MERCHANT</h1></i>
-  <div class="row">
+<h3>Delete: <%= @merchants.merchant_name %> ?</h3>
 
-    <h3>Delete: <%= @merchants.merchant_name %> ?</h3>
+<form action="/merchant/<%=@merchants.id%>/delete" method="post"><input type="submit" value="Delete"></form>
 
-    <form action="/merchant/<%=@merchants.id%>/delete" method="post"><input type="submit" value="Delete"></form>
-
-        <form action="/merchant/<%=@merchants.id%>/edit" method="get"><input type="submit" value="Edit"></form>
-  </div>
-</div>
+<form action="/merchant/<%=@merchants.id%>/edit" method="get"><input type="submit" value="Edit"></form>

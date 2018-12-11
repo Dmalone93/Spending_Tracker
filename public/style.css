@@ -1,26 +1,46 @@
 body {
-  background-color: rgb(40, 109, 135);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: 75% 50%;
+  background-position: center;
+
+}
+
+#witcher {
+  padding-top: 85px
 }
 
 h1 {
   padding-left: 40px;
-  color: white;
+  color: gold;
   font-family: helvetica;
   font-size: 30px;
   background-color: #000000;
-  border-bottom: 1px solid #7b847b;
-  color: #fff;
+  margin: 0;
 }
 
-.navbar{
-  display; flex
+.grid {
+  display: flex;
 }
 
+#click {
+  width: 25em; height: 3em;
+  font-size: 12px;
+}
 
+.center {
+
+  padding-bottom: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  size: 100%;
+}
 .edit-tag {
   display: flex;
   flex-direction: column;
 }
+
 
 .container-header {
   display: flex;
@@ -35,11 +55,11 @@ h1 {
 a {
   border-bottom: 1px solid #7b847b;
   padding-left: 40px;
-  color: white;
+  color: black;
 }
 
 .btn {
-  color: blue;
+  color: red;
   font-family: helvetica;
   font-size: 30px;
   background-color: #4CAF50;
@@ -53,29 +73,37 @@ a {
 
 }
 
-h2, .home {
+table:hover {
+  color: yellow;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.class {
+  display: flex;
+  flex-direction: column;
+}
+
+table, td, tr {
+  border: 1px solid green;
+  font-family: helvetica;
+  height: 50px;
+  text-align: center;
+}
+
+h2, h3, .home {
   font-size: 25px;
   font-family: helvetica;
-  color: white;
+  color: black;
   text-align:justify;
 }
 
-label {
-  font-family: helvetica;
-  color: white;
-  font-size: 20px;
-  align-items: center;
-}
-
 p {
-  font-size: 15px;
-  color: white;
+  font-size: 25px;
+  color: black;
   font-family: helvetica;
 }
 
-u {
-  color: white;
-}
 
 .value {
   font-size: 80px;
@@ -84,7 +112,7 @@ u {
 
 
 h3 {
-  color: white;
+  color: black;
 }
 
 .row {
