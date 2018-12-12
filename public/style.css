@@ -3,6 +3,7 @@ body {
   background-size: auto;
   background-size: 75% 50%;
   background-position: center;
+  background-color: gold;
 
 }
 
@@ -11,21 +12,46 @@ body {
 }
 
 h1 {
-  padding-left: 40px;
-  color: gold;
+  padding: 10px;
+  color: white;
   font-family: helvetica;
-  font-size: 30px;
+  font-size: 40px;
   background-color: #000000;
   margin: 0;
 }
 
+.merchant_name {
+  padding-right: 40px;
+}
+
+.tag_name {
+  padding-right: 40px
+}
+
 .grid {
   display: flex;
+  justify-content: center;
 }
 
 #click {
-  width: 25em; height: 3em;
-  font-size: 12px;
+  width: 8em; height: 2em;
+  font-size: 20px;
+  color: : green;
+}
+
+.grid {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  color: gold;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+grid:focus {
+    background: #0053ba;
 }
 
 .center {
@@ -52,8 +78,11 @@ h1 {
 
 }
 
+a:hover {
+  color: white;
+}
+
 a {
-  border-bottom: 1px solid #7b847b;
   padding-left: 40px;
   color: black;
 }
@@ -61,11 +90,10 @@ a {
 .btn {
   color: red;
   font-family: helvetica;
-  font-size: 30px;
+  font-size: 60px;
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -74,8 +102,8 @@ a {
 }
 
 table:hover {
-  color: yellow;
-  border-collapse: collapse;
+  color: green;
+  border-collapse: inherit;
   width: 100%;
 }
 
@@ -85,31 +113,24 @@ table:hover {
 }
 
 table, td, tr {
-  border: 1px solid green;
+  border: 1px solid white;
   font-family: helvetica;
   height: 50px;
   text-align: center;
 }
 
 h2, h3, .home {
-  font-size: 25px;
+  font-size: 30px;
   font-family: helvetica;
   color: black;
   text-align:justify;
 }
 
 p {
-  font-size: 25px;
+  font-size: 14px;
   color: black;
   font-family: helvetica;
 }
-
-
-.value {
-  font-size: 80px;
-  font-family: helvetica
-}
-
 
 h3 {
   color: black;

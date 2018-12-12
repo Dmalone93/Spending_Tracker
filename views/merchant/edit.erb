@@ -1,4 +1,6 @@
-  <form action="/merchant/<%= @merchants.id %>/edit" method="post">
-    <input type="text" name="merchant_name" value="<%= @merchants.merchant_name %>">
-    <input  type="submit" value="Edit Merchant">
-    </form>
+<i><h2>Edit the name of your Merchant</h2></i>
+
+<form action="/merchant/<%= @merchants.id %>/edit" method="post">
+  <input type="text" name="merchant_name" value="<%= @merchants.merchant_name %>">
+  <input  type="submit" value="Edit Merchant">
+</form>
