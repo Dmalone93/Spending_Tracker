@@ -1,8 +1,11 @@
 <i><h1>ALL TRANSACTIONS</h1></i>
 <body>
   <nav>
+    <br>
+    <br>
     <form action="/transaction/new"><input type="submit" value="Create Transaction"></form>
   </nav>
+  <br>
 
 
   <table>
@@ -18,15 +21,15 @@
       <td><u><p>Total: £<%= transaction.value() %></p></u></td>
       <td><p>Date: <%= transaction.day() %></p></td>
       <% total += transaction.value() %>
-      <td><form method="post" action="/transaction/<%= transaction.id %>/delete"><input type="submit" value="Delete Transaction"></form></td>
+      <td><form  class="transaction-delete" method="post" action="/transaction/<%= transaction.id %>/delete"><input type="submit" value="Delete Transaction"></form></td>
     </tr>
     <% end %>
   </table>
 
 
   <div class="budget">
-    <div class="response"><p><label for="value">Total Amount Spent: £<%=total%> </label></p></div>
-    <div class="response"><p><label for="budget">Budget: £<%=transaction.budget - total %></label></p></div>
+    <p class="response"><label for="value">Total Amount Spent: £<%=total%> </label></p>
+    <p class="response"><label for="budget">Budget: £<%=transaction.budget - total %></label></p>
   </div>
 
 </body>
