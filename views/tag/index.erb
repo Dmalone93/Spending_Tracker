@@ -7,7 +7,7 @@
 <br>
 <table>
   <tr>
-    <td><% for tag in @tags %></td>
+    <td class="tag-table"><% for tag in @tags %></td>
 
     <td><p><a class="tag_name" href="/tag/<%= tag.id %>"><%=tag.tag_name %></a></p></td>
     <% end %>

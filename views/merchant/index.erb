@@ -4,11 +4,10 @@
 <br>
 
 <form action="/merchant/new"><input type="submit" value="Create Merchant"></form>
-</nav>
 <br>
 <table>
   <tr>
-    <td><% for merchant in @merchants %></td>
+    <td class="tag-table"><% for merchant in @merchants %></td>
 
     <td><p><a class="merchant_name" href="/merchant/<%= merchant.id %>"> <%= merchant.merchant_name %></a></p></td>
     <% end %>

@@ -15,11 +15,11 @@
 
 
 
-      <td><p>id: <%=transaction.id()%></p></td>
-      <td><p>Merchant: <%= transaction.merchant.merchant_name() %> </p></td>
-      <td><p>Tag: <%= transaction.tag.tag_name() %></p></td>
-      <td><u><p>Total: £<%= transaction.value() %></p></u></td>
-      <td><p>Date: <%= transaction.day() %></p></td>
+      <td><p class="table-text">id: <%=transaction.id()%></p></td>
+      <td><p class="table-text">Merchant: <%= transaction.merchant.merchant_name() %> </p></td>
+      <td><p class="table-text">Tag: <%= transaction.tag.tag_name() %></p></td>
+      <td><u><p class="table-text">Total: £<%= transaction.value() %></p></u></td>
+      <td><p class="table-text">Date: <%= transaction.day() %></p></td>
       <% total += transaction.value() %>
       <td><form  class="transaction-delete" method="post" action="/transaction/<%= transaction.id %>/delete"><input type="submit" value="Delete Transaction"></form></td>
     </tr>

@@ -1,26 +1,25 @@
 <i><h1>NEW TRANSACTION</h1></i>
 <hr/>
 
-
-<div class="transaction--form"><form action="/transaction/new" method="post">
-  <label>Select a merchant:</label>
+<form class="form" action="/transaction/new" method="post">
+  <label>SELECT A MERCHANT:</label>
   <select name="merchant_id">
     <% for merchant in @merchants %>
     <option value="<%= merchant.id %>"><%= merchant.merchant_name %></option>
     <% end %>
   </select>
 
-  <label>Select a tag:</label>
+  <label>SELECT A TAG:</label>
   <select name="tag_id">
     <% for tag in @tags %>
     <option value="<%= tag.id %>"><%= tag.tag_name %></option>
     <% end %>
   </select>
 
-  <input type="number" name="value">
-  <input type="date" name="day">
+  <input class="form" type="number" name="value">
+  <input class="form" type="date" name="day">
 
 
   <input type="submit" value="add transaction">
 
-</form></div>
+</form>

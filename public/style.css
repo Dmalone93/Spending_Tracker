@@ -7,6 +7,43 @@ body {
 
 }
 
+.button {
+  padding: 20px;
+}
+
+.tag-table {
+  color: white;
+}
+
+
+.tag-para {
+  font-size: 16px;
+  border: 2px solid black;
+  margin-right: 1300px;
+  background-color: white;
+  color: black;
+}
+
+.new-tag {
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+.merchant-para {
+  font-size: 16px;
+  border: 2px solid black;
+  margin-right: 1300px;
+  background-color: white;
+  color: black;
+
+}
+
+.new-merchant {
+  font-family: helvetica;
+  font-size: 20px;
+  color: gold;
+}
+
 #witcher {
   padding-top: 85px
 }
@@ -36,7 +73,7 @@ h1 {
 #click {
   width: 8em; height: 2em;
   font-size: 20px;
-  color: : green;
+  color: black;
 }
 
 .grid {
@@ -50,8 +87,18 @@ h1 {
   justify-content: center;
 }
 
+.table-text {
+  color: white;
+}
+
 grid:focus {
     background: #0053ba;
+}
+.form{
+  font-family: helvetica;
+  border: 1px;
+  font-size: 15px;
+
 }
 
 .center {
@@ -84,7 +131,7 @@ a:hover {
 
 a {
   padding-left: 40px;
-  color: black;
+  color: white;
 }
 
 .btn {
@@ -99,9 +146,6 @@ a {
   display: inline-block;
   font-size: 16px;
 
-}
-tr:hover {
-  color: gold;
 }
 
 td:hover {
@@ -120,37 +164,33 @@ table {
 }
 
 table, td, tr {
-  border: 1px solid black;
+  border: 1px solid gold;
   font-family: bold helvetica;
-
   height: 50px;
   text-align: center;
-  background-color: white;
-  color: gold;
+  background-color:	rgb(102, 122, 153);
+  color: white;
 }
 
 h2, h3, .home {
   font-size: 30px;
   font-family: helvetica;
-  color: black;
+  color: white;
   text-align:justify;
 }
 
-.budget {
-  border: 1px
-}
 
 .response {
-  color: black;
+  color: white;
   border: 2px solid black;
   margin-right: 1300px;
-  background-color: white;
+  background-color:	rgb(102, 122, 153);
   font-size: 15px;
 }
 
 p {
   font-size: 14px;
-  color: black;
+  color: white;
   font-family: helvetica;
 }
 
