@@ -13,8 +13,6 @@
       <% total = 0 %>
       <% for transaction in @transaction %>
 
-
-
       <td><p class="table-text">id: <%=transaction.id()%></p></td>
       <td><p class="table-text">Merchant: <%= transaction.merchant.merchant_name() %> </p></td>
       <td><p class="table-text">Tag: <%= transaction.tag.tag_name() %></p></td>
